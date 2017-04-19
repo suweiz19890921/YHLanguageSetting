@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		15372ACFFF9F042DA605CFD9 /* libPods-YHLangDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E170CDBAE1151B1BFA9CE18A /* libPods-YHLangDemo.a */; };
-		793C4E071EA7132C0012BBAF /* YHLanguageSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 793C4E031EA7132C0012BBAF /* YHLanguageSetting.m */; };
-		793C4E081EA7132C0012BBAF /* LanguageSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 793C4E061EA7132C0012BBAF /* LanguageSettingViewController.m */; };
+		793C4E0E1EA720A40012BBAF /* LanguageSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 793C4E0B1EA720A40012BBAF /* LanguageSettingViewController.m */; };
+		793C4E0F1EA720A40012BBAF /* YHLanguageSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 793C4E0D1EA720A40012BBAF /* YHLanguageSetting.m */; };
 		79C81BEE1EA70BBA00E02A2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C81BED1EA70BBA00E02A2B /* main.m */; };
 		79C81BF11EA70BBA00E02A2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C81BF01EA70BBA00E02A2B /* AppDelegate.m */; };
 		79C81BF41EA70BBA00E02A2B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C81BF31EA70BBA00E02A2B /* ViewController.m */; };
@@ -19,10 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		793C4E021EA7132C0012BBAF /* YHLanguageSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHLanguageSetting.h; sourceTree = "<group>"; };
-		793C4E031EA7132C0012BBAF /* YHLanguageSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHLanguageSetting.m; sourceTree = "<group>"; };
-		793C4E051EA7132C0012BBAF /* LanguageSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageSettingViewController.h; sourceTree = "<group>"; };
-		793C4E061EA7132C0012BBAF /* LanguageSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageSettingViewController.m; sourceTree = "<group>"; };
+		793C4E0A1EA720A40012BBAF /* LanguageSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageSettingViewController.h; sourceTree = "<group>"; };
+		793C4E0B1EA720A40012BBAF /* LanguageSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageSettingViewController.m; sourceTree = "<group>"; };
+		793C4E0C1EA720A40012BBAF /* YHLanguageSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHLanguageSetting.h; sourceTree = "<group>"; };
+		793C4E0D1EA720A40012BBAF /* YHLanguageSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHLanguageSetting.m; sourceTree = "<group>"; };
 		79C81BE91EA70BBA00E02A2B /* YHLangDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHLangDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C81BED1EA70BBA00E02A2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		79C81BEF1EA70BBA00E02A2B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,32 +67,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		793C4E001EA7132C0012BBAF /* YHLanguageSetting */ = {
+		793C4E091EA720A40012BBAF /* YHLanguageSetting */ = {
 			isa = PBXGroup;
 			children = (
-				793C4E011EA7132C0012BBAF /* Setting */,
-				793C4E041EA7132C0012BBAF /* UI */,
+				793C4E0A1EA720A40012BBAF /* LanguageSettingViewController.h */,
+				793C4E0B1EA720A40012BBAF /* LanguageSettingViewController.m */,
+				793C4E0C1EA720A40012BBAF /* YHLanguageSetting.h */,
+				793C4E0D1EA720A40012BBAF /* YHLanguageSetting.m */,
 			);
-			name = YHLanguageSetting;
-			path = ../../YHLanguageSetting;
-			sourceTree = "<group>";
-		};
-		793C4E011EA7132C0012BBAF /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-				793C4E021EA7132C0012BBAF /* YHLanguageSetting.h */,
-				793C4E031EA7132C0012BBAF /* YHLanguageSetting.m */,
-			);
-			path = Setting;
-			sourceTree = "<group>";
-		};
-		793C4E041EA7132C0012BBAF /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				793C4E051EA7132C0012BBAF /* LanguageSettingViewController.h */,
-				793C4E061EA7132C0012BBAF /* LanguageSettingViewController.m */,
-			);
-			path = UI;
+			path = YHLanguageSetting;
 			sourceTree = "<group>";
 		};
 		79C81BE01EA70BBA00E02A2B = {
@@ -116,7 +99,7 @@
 		79C81BEB1EA70BBA00E02A2B /* YHLangDemo */ = {
 			isa = PBXGroup;
 			children = (
-				793C4E001EA7132C0012BBAF /* YHLanguageSetting */,
+				793C4E091EA720A40012BBAF /* YHLanguageSetting */,
 				79C81BEF1EA70BBA00E02A2B /* AppDelegate.h */,
 				79C81BF01EA70BBA00E02A2B /* AppDelegate.m */,
 				79C81BF21EA70BBA00E02A2B /* ViewController.h */,
@@ -261,11 +244,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				793C4E0F1EA720A40012BBAF /* YHLanguageSetting.m in Sources */,
 				79C81BF41EA70BBA00E02A2B /* ViewController.m in Sources */,
-				793C4E071EA7132C0012BBAF /* YHLanguageSetting.m in Sources */,
-				793C4E081EA7132C0012BBAF /* LanguageSettingViewController.m in Sources */,
 				79C81BF11EA70BBA00E02A2B /* AppDelegate.m in Sources */,
 				79C81BEE1EA70BBA00E02A2B /* main.m in Sources */,
+				793C4E0E1EA720A40012BBAF /* LanguageSettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

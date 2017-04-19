@@ -18,15 +18,15 @@ Pod::Spec.new do |s|
   # s.source_files  = "YHLanguageSetting", "YHLanguageSetting/**/*.{h,m}"
   s.subspec 'UI' do |ss| 
     ss.ios.deployment_target = '8.0'
-    ss.source_files = 'YHLanguageSetting/*.{h,m}'
-    ss.public_header_files = 'YHLanguageSetting/*.h'
+    ss.source_files = 'YHLanguageSetting/LanguageSettingViewController.{h,m}'
+    ss.public_header_files = 'YHLanguageSetting/LanguageSettingViewController.h'
     ss.dependency 'YHLanguageSetting/Setting'
   end
 
   s.subspec 'Setting' do |ss| 
     ss.ios.deployment_target = '8.0'
-    ss.source_files = 'YHLanguageSetting/YHLanguageSetting/*.{h.m}'
-    ss.public_header_files = 'YHLanguageSetting/YHLanguageSetting/*.h'
+    ss.source_files = 'YHLanguageSetting/YHLanguageSetting.{h.m}'
+    ss.public_header_files = 'YHLanguageSetting/YHLanguageSetting.h'
     ss.dependency 'MBProgressHUD'
     ss.dependency 'GZIP'
     end
