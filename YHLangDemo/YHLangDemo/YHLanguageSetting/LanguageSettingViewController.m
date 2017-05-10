@@ -78,6 +78,7 @@ static NSString * const LanguageCellIdentifier = @"LanguageCellIdentifier";
 //    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:Locale(@"取消") style:0 target:self action:@selector(cancelAction:)];
 //    self.navigationItem.leftBarButtonItem = leftItem;
     
+    
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:Locale(@"保存") style:0 target:self action:@selector(saveAction:)];
     self.navigationItem.rightBarButtonItem = rightItem;
 }
