@@ -111,8 +111,9 @@ NSString * const FirstCopyLanguageKey = @"FirstCopyLanguageKey";
         NSArray *languagePaths = [[NSBundle mainBundle] pathsForResourcesOfType:@"lproj" inDirectory:nil];
         NSString *documentPath = DIRECTORY;
         for (NSString *path in languagePaths) {
+            
             NSString *lastComponent = path.lastPathComponent;
-            NSString *filePath = [path stringByAppendingPathComponent:@"Localization.strings"];
+            NSString *filePath = [path stringByAppendingPathComponent:@"Localizable.strings"];
             //拷贝
             if ([lastComponent hasPrefix:@"en"]) {
                 NSString *toPath = [documentPath stringByAppendingPathComponent:@"en.strings"];
