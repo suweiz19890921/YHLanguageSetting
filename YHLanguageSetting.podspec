@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YHLanguageSetting"
-  s.version      = "0.0.7"
+  s.version      = "0.0.9"
   s.summary      = "语言设置"
   s.description  = <<-DESC
   语言设置。
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.author             = { "李傲" => "liao@solot.com" }
 
   s.platform     = :ios, "8.0"
-  s.source       = { :git => "http://git.solot.co:10080/liao/YHLanguageSetting.git", :tag => "0.0.7" }
+  s.source       = { :git => "http://git.solot.co:10080/liao/YHLanguageSetting.git", :tag => "0.0.9" }
 
   # s.source_files  = "YHLanguageSetting", "YHLanguageSetting/**/*.{h,m}"
 

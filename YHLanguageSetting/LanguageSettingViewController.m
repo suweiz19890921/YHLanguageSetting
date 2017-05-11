@@ -91,7 +91,7 @@ static NSString * const LanguageCellIdentifier = @"LanguageCellIdentifier";
 - (void)saveAction:(id)saveAction
 {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-    hud.labelText = Locale(@"切换中...");
+    hud.labelText = Locale(@"切换中");
     [YHLanguageSetting setLanguage:self.currentLanguage completion:^(BOOL success) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         if (success) {
@@ -108,7 +108,7 @@ static NSString * const LanguageCellIdentifier = @"LanguageCellIdentifier";
 
 - (void)_dismiss
 {
-    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
