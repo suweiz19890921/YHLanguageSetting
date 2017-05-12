@@ -203,7 +203,7 @@ NSString * const FirstCopyLanguageKey = @"FirstCopyLanguageKey";
             });
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
-                completion([NSError errorWithDomain:@"not resource" code:-1 userInfo:nil]);
+                !completion ?: completion([NSError errorWithDomain:@"not resource" code:-1 userInfo:nil]);
             });
         }
         
