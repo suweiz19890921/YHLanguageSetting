@@ -188,8 +188,11 @@ NSString * const FirstCopyLanguageKey = @"FirstCopyLanguageKey";
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:request completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSData *data = [NSData dataWithContentsOfURL:location];
+        if (![data isKindOfClass:[NSData class]] || data.length == 0) {
+            return;
+        }
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data.gunzippedData options:kNilOptions error:nil];
-        if (dic.allKeys.count > 0) {
+        if ([dic isKindOfClass:[NSDictionary class]] && dic.allKeys.count > 0) {
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 for (NSString *key in dic.allKeys)
                 {
