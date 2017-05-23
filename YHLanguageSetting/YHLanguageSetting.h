@@ -22,6 +22,8 @@ static NSString * const HQLocalizableDidChangeNotification = @"HQLocalizableDidC
 @interface YHLanguageSetting : NSObject
 @property (nonatomic, strong) NSString *downloadUrl; //@"https://testapi.solot.co/catches/syncResource"
 
+@property (nonatomic, copy) NSString *appId;    //默认为catches
+
 + (instancetype)shareInstance;
 
 - (void)downloadLanguage:(NSString *)language completion:(void(^)(NSError *error))completion;
