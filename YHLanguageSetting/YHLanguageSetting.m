@@ -183,7 +183,7 @@ NSString * const FirstCopyLanguageKey = @"FirstCopyLanguageKey";
     NSURL *url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = @"GET";
-    [request setValue:[[self class] userAgent] forHTTPHeaderField:@"User-Agent"];
+    [request setValue:[self userAgent] forHTTPHeaderField:@"User-Agent"];
     [request setValue:@"gzip" forHTTPHeaderField:@"Content-Encoding"];
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:request completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
