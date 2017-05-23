@@ -22,7 +22,7 @@ static NSString * const LanguageCellIdentifier = @"LanguageCellIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = Locale(@"语言切换");
+    self.title = Locale(@"Home_Settings_LanguageTitle");
     self.dataSource = [YHLanguageSetting allLangualges];
     self.currentLanguage = [YHLanguageSetting currentLanguage];
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
@@ -91,15 +91,15 @@ static NSString * const LanguageCellIdentifier = @"LanguageCellIdentifier";
 - (void)saveAction:(id)saveAction
 {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-    hud.labelText = Locale(@"切换中");
+    hud.labelText = Locale(@"Home_General_Changing");
     [YHLanguageSetting setLanguage:self.currentLanguage completion:^(BOOL success) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         if (success) {
-            hud.labelText = Locale(@"切换成功");
+            hud.labelText = Locale(@"Home_General_ChangeSucc");
             [hud hide:YES afterDelay:.5];
             [self performSelector:@selector(_dismiss) withObject:nil afterDelay:.5];
         } else {
-            hud.labelText = Locale(@"切换失败");
+            hud.labelText = Locale(@"Home_General_ChangeFail");
             [hud hide:YES];
         }
     }];
