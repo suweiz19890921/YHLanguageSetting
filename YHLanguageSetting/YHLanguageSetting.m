@@ -105,7 +105,6 @@ NSString * const FirstCopyLanguageKey = @"FirstCopyLanguageKey";
 - (void)firstCopy
 {
     BOOL hasCopyied = [self hasCopiedLanguage];
-    hasCopyied = NO;
     if (!hasCopyied) {
         NSFileManager *filemanager = [NSFileManager defaultManager];
         NSArray *languagePaths = [[NSBundle mainBundle] pathsForResourcesOfType:@"lproj" inDirectory:nil];
