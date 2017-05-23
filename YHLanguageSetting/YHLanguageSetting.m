@@ -214,10 +214,11 @@ NSString * const FirstCopyLanguageKey = @"FirstCopyLanguageKey";
     [task resume];
 }
 
-+ (NSString *)userAgent
+- (NSString *)userAgent
 {
     float scale = [[UIScreen mainScreen] scale];
-    NSString *UserAgent = [NSString stringWithFormat:@"catches/%@ (iOS %@; %@; %@; %@; Scale/%0.2f;%@)"
+    NSString *UserAgent = [NSString stringWithFormat:@"%@/%@ (iOS %@; %@; %@; %@; Scale/%0.2f;%@)"
+                           , self.appId?:@"catches"
                            , LANG_APP_VERSION
                            , [[UIDevice currentDevice] systemVersion]
                            , [self platform]
@@ -227,6 +228,7 @@ NSString * const FirstCopyLanguageKey = @"FirstCopyLanguageKey";
                            , @""];
     return UserAgent;
 }
+
 
 - (void)loadLocalizable
 {
@@ -466,9 +468,9 @@ NSString * const FirstCopyLanguageKey = @"FirstCopyLanguageKey";
     return results;
 }
 
-+ (NSString *) platform
+- (NSString *) platform
 {
-    return [self getSysInfoByName:"hw.machine"];
+    return [[self class] getSysInfoByName:"hw.machine"];
 }
 
 // data 的 MD5 值
