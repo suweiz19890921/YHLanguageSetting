@@ -178,7 +178,10 @@ NSString * const FirstCopyLanguageKey = @"FirstCopyLanguageKey";
             urlString = [NSString stringWithFormat:@"%@&md5=%@", urlString, md5String];
         }
     }
-    
+    else
+    {
+        urlString = [NSString stringWithFormat:@"%@&md5=0", urlString];
+    }
     NSURL *url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = @"GET";
