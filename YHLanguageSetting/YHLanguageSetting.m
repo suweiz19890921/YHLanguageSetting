@@ -84,6 +84,7 @@ NSString * const FirstCopyLanguageKey = @"FirstCopyLanguageKey";
         [self downloadLanguage:language completion:^(NSError *error) {
             if (!error) {
                 self.currentLanguage = language;
+                [self loadLocalizable];
                 !completion ?: completion(YES);
                 [[NSNotificationCenter defaultCenter] postNotificationName:HQLocalizableDidChangeNotification object:nil];
             } else {
