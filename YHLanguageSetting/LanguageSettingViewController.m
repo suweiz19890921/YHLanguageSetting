@@ -79,7 +79,7 @@ static NSString * const LanguageCellIdentifier = @"LanguageCellIdentifier";
 //    self.navigationItem.leftBarButtonItem = leftItem;
     
     
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:Locale(@"New_CreateSpot_Save") style:0 target:self action:@selector(saveAction:)];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:Locale(@"Home_Settings_Apply") style:0 target:self action:@selector(saveAction:)];
     self.navigationItem.rightBarButtonItem = rightItem;
 }
 
