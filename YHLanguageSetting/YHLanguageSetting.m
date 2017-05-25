@@ -372,7 +372,21 @@ NSString * const FirstCopyLanguageKey = @"FirstCopyLanguageKey";
         model.isSupport = isSupport;
         [tmpArr addObject:model];
     }
-    return [tmpArr copy];
+    
+    NSMutableArray *supportLans = [NSMutableArray array];
+    NSMutableArray *notSupportLans = [NSMutableArray array];
+    for (LanguageModel *data in tmpArr) {
+        if(data.isSupport)
+        {
+            [supportLans addObject:data];
+        }
+        else
+        {
+            [notSupportLans addObject:data];
+        }
+    }
+    [supportLans addObjectsFromArray:notSupportLans];
+    return [supportLans copy];
 }
 
 + (NSArray *)languagesCodeCanUse
