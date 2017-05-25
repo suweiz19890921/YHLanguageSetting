@@ -36,4 +36,5 @@ static NSString * const HQLocalizableDidChangeNotification = @"HQLocalizableDidC
 
 + (NSString *)localizable:(NSString *)key;
 
++ (void)setLanguageCanUse:(NSArray *)arr;
 @end
