@@ -430,7 +430,8 @@ NSString * const FirstCopyLanguageKey = @"FirstCopyLanguageKey";
              @"hu",
              @"hr",
              @"uk",
-             @"ru"
+             @"ru",
+             @"Urdu"
              ];
 }
 
@@ -463,7 +464,8 @@ NSString * const FirstCopyLanguageKey = @"FirstCopyLanguageKey";
              @"hu"                 : @"Magyar",
              @"hr"                 : @"Hrvatski",
              @"uk"                 : @"Yкраїнська",
-             @"ru"                 : @"Pусский"
+             @"ru"                 : @"Pусский",
+             @"Urdu"               : @"اردو"
              };
 }
 
