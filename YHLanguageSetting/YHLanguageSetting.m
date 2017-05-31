@@ -442,7 +442,7 @@ NSString * const FirstCopyLanguageKey = @"FirstCopyLanguageKey";
              @"zh_Hant_HK"         : @"繁體中文(香港)",
              @"en"                 : @"English",
              @"ja"                 : @"日本語",
-             @"ko"                 : @"한국의",
+             @"ko"                 : @"한국어",
              @"th"                 : @"ภาษาไทย",
              @"vi"                 : @"Tiếng việt",
              @"id"                 : @"Bahasa Indonesia",
