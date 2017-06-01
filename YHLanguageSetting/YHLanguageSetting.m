@@ -115,17 +115,7 @@ NSString * const FirstCopyLanguageKey = @"FirstCopyLanguageKey";
             NSString *lastComponent = path.lastPathComponent;
             NSString *filePath = [path stringByAppendingPathComponent:@"Localizable.strings"];
             //拷贝
-            if ([lastComponent hasPrefix:@"en"]) {
-                NSString *toPath = [documentPath stringByAppendingPathComponent:@"en.strings"];
-                if ([filemanager fileExistsAtPath:filePath]) {
-                    NSError *error;
-                    if ([filemanager fileExistsAtPath:toPath]) {
-                        [filemanager removeItemAtPath:toPath error:nil];
-                    }
-                    [filemanager copyItemAtPath:filePath toPath:toPath error:&error];
-                    NSLog(@"error : %@", error);
-                }
-            } else if ([lastComponent hasPrefix:@"zh-Hans"]) {
+            if ([lastComponent hasPrefix:@"zh-Hans"]) {
                 NSString *toPath = [documentPath stringByAppendingPathComponent:@"zh_Hans.strings"];
                 if ([filemanager fileExistsAtPath:filePath]) {
                     if ([filemanager fileExistsAtPath:toPath]) {
@@ -148,8 +138,9 @@ NSString * const FirstCopyLanguageKey = @"FirstCopyLanguageKey";
                     NSError *error;
                     [filemanager copyItemAtPath:filePath toPath:toPath error:&error];
                 }
-            } else if ([lastComponent hasPrefix:@"ja"]) {
-                NSString *toPath = [documentPath stringByAppendingPathComponent:@"ja.strings"];
+            } else {
+                NSString *name = [[lastComponent substringToIndex:[lastComponent rangeOfString:@"."].location] stringByAppendingString:@".strings"];
+                NSString *toPath = [documentPath stringByAppendingPathComponent:name];
                 if ([filemanager fileExistsAtPath:filePath]) {
                     if ([filemanager fileExistsAtPath:toPath]) {
                         [filemanager removeItemAtPath:toPath error:nil];
@@ -192,6 +183,9 @@ NSString * const FirstCopyLanguageKey = @"FirstCopyLanguageKey";
     NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:request completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSData *data = [NSData dataWithContentsOfURL:location];
         if (![data isKindOfClass:[NSData class]] || data.length == 0) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                !completion ?: completion(error);
+            });
             return;
         }
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data.gunzippedData options:kNilOptions error:nil];
@@ -442,7 +436,7 @@ NSString * const FirstCopyLanguageKey = @"FirstCopyLanguageKey";
              @"zh_Hant_HK"         : @"繁體中文(香港)",
              @"en"                 : @"English",
              @"ja"                 : @"日本語",
-             @"ko"                 : @"한국의",
+             @"ko"                 : @"한국어",
              @"th"                 : @"ภาษาไทย",
              @"vi"                 : @"Tiếng việt",
              @"id"                 : @"Bahasa Indonesia",
