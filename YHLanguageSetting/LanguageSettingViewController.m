@@ -25,7 +25,7 @@ static NSString * const LanguageCellIdentifier = @"LanguageCellIdentifier";
     self.title = Locale(@"Home_Settings_Language");
     self.dataSource = [YHLanguageSetting allLangualges];
     self.currentLanguage = [YHLanguageSetting currentLanguage];
-     UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height - 64) style:UITableViewStyleGrouped];
+     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     tableView.delegate = self;
     tableView.dataSource = self;
 
