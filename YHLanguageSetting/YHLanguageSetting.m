@@ -126,10 +126,10 @@ NSString * const FirstCopyLanguageKey = @"FirstCopyLanguageKey";
                 }
             } else if ([lastComponent hasPrefix:@"zh-Hant"]) {
                 NSString *toPath = nil;
-                if ([lastComponent hasPrefix:@"zh-Hant-TW"]) {
-                    toPath = [documentPath stringByAppendingPathComponent:@"zh_Hant_TW.strings"];
-                } else {
+                if ([lastComponent hasPrefix:@"zh-Hant-HK"]) {
                     toPath = [documentPath stringByAppendingPathComponent:@"zh_Hant_HK.strings"];
+                } else {
+                    toPath = [documentPath stringByAppendingPathComponent:@"zh_Hant_TW.strings"];
                 }
                 if ([filemanager fileExistsAtPath:filePath]) {
                     if ([filemanager fileExistsAtPath:toPath]) {
