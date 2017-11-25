@@ -1,8 +1,7 @@
-
 Pod::Spec.new do |s|
 
   s.name         = "YHLanguageSetting"
-  s.version      = "0.1.9"
+  s.version      = "0.2.0"
   s.summary      = "语言设置"
   s.description  = <<-DESC
   语言设置。
