@@ -7,12 +7,12 @@ Pod::Spec.new do |s|
   语言设置。
                    DESC
 
-  s.homepage     = "http://git.solot.co:10080/liao/YHLanguageSetting.git"
+  s.homepage     = "https://github.com/suweiz19890921/YHLanguageSetting"
   s.license      = { :type => "MIT", :file => "LICENSE" }
-  s.author             = { "李傲" => "liao@solot.com" }
+  s.author             = { "李傲" => "814325429@qq.com" }
 
   s.platform     = :ios, "8.0"
-  s.source       = { :git => "http://git.solot.co:10080/liao/YHLanguageSetting.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/suweiz19890921/YHLanguageSetting.git", :tag => s.version.to_s }
 
   # s.source_files  = "YHLanguageSetting", "YHLanguageSetting/**/*.{h,m}"
 
